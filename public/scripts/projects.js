@@ -7,7 +7,7 @@ readJSON();
 function readJSON() {
     console.log("Reading JSON file.");
     $.ajax({
-        url: "project_list.json",
+        url: "/projects/project_list.json",
         dataType: "json",
         success: function (parsed_json) {
             console.log("Found the JSON file.");
