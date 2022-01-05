@@ -1,0 +1,27 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+# relative_permalinks: true
+
+# Setup
+title:            DalenW
+tagline:          "DalenW's Blog"
+description:      "Dalen's Blog. Contains tidbits of stuff I program and find interesting."
+url:              https://wwww.dalenw.dev
+baseurl:          /
+
+author:
+  name:           'Dalen Ward'
+  url:            https://wwww.dalenw.dev
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/DalenW/DalenW.io
+  profile:         https://github.com/DalenW
