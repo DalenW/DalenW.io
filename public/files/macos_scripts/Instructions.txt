@@ -1,3 +1,0 @@
-Remember to make it launchable after downloading. 
-
-sudo chmod +x "filename"
