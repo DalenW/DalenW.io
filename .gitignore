@@ -6,3 +6,6 @@ Caddyfile
 
 .vscode
 *.cache
+.idea
+.jekyll-cache
+_site
