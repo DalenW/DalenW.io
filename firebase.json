@@ -24,6 +24,10 @@
         "destination": "/simplymac/operations.html"
       },
       {
+        "source": "/simplymac/operations",
+        "destination": "/simplymac/operations.html"
+      },
+      {
         "source": "/simplymac/fedexshortener",
         "destination": "/simplymac/fedexshortener.html"
       },
