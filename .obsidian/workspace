@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "59521ff0cada309d",
+    "type": "split",
+    "children": [
+      {
+        "id": "95f97f81b0d5b726",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "_posts/2022-03-15-host-website-on-firebase.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2af4ee9ca1b4326a",
+    "type": "split",
+    "children": [
+      {
+        "id": "19e9d60b7a5fcbbd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5b2a898f839e9ff4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "3bb7be2f3bb6566f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "315ca6950b75fc64",
+    "type": "split",
+    "children": [
+      {
+        "id": "98e8956c68d319f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "730068ab14891ffd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2022-03-15-host-website-on-firebase.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "95f97f81b0d5b726",
+  "lastOpenFiles": [
+    "_posts/2022-03-15-host-website-on-firebase.md"
+  ]
+}
