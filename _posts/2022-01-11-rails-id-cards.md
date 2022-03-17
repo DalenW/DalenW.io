@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Rails ID Card Generation
+published: false
 ---
 
 For one of my clients I was tasked with generating ID cards in a web app that runs on Ruby on Rails.

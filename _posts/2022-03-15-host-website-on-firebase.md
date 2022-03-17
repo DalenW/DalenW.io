@@ -1,12 +1,14 @@
 ---
 layout: post
 title: Host a Static Website on Firebase
+published: true
 ---
 
 # Host a Static Website on Firebase
 
 If you've ever needed to host a static website for free, Firebase is a good start. 
 It's simple to use, and everything on it is behind a CDN, so you're getting excellent load times pretty much anywhere in the world. This guide will be broken up into several large steps, with a few sub-steps. If you have any questions, feel free to email me.
+
 
 ### 1. Setup your domain
 
@@ -24,6 +26,8 @@ Navigate to [Firebase's website](https://firebase.google.com), login with your g
 
 Now that the Firebase project is created, we need some code for it. 
 
+
+
 ### 3. Create a git repo
 
 With your preffered git provider (I recommend GitHub for later firebase integration), we need to create a repo for your website. If you already have one, you can skip this step. So create a git repo, and if during the setup you're offered to commit a readme and license to your new repo, do that. 
@@ -33,6 +37,8 @@ With your preffered git provider (I recommend GitHub for later firebase integrat
 Then clone your repo onto your computer. At this point, there's only one branch in your repo and it's probably called "main" or "master". Using your preffered git client, create a new branch from that commit and call it something like "release". We'll have at least 2 branches with this project. A master branch for development, and a release branch. The release branch will be what will be synced with your live website. With a GitHub repo, Firebase can auto-deploy your release branch as soon as it is committed to. 
 
 ![[git-branches.png]]
+
+
 
 ### 4. Setup Firebase in Project
 
@@ -61,7 +67,90 @@ At this point we have some new files in our project. As of this post, my file st
 If you run `firebase serve` in your terminal, it will host your website with the default files. And if you navigate to [http://localhost:5000](http://localhost:5000), you should see what the default files look like!
 
 
+
+### 5. Configuring Firebase
+
+The file `firebase.json` is where you configure your Firebase project. Right now mine looks like this:
+```json
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
+```
+
+We're going to be editing the `rewrites` value of `hosting` in the json file. So add on to your `firebase.json` so that it looks like this:
+```json
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
+```
+
+`rewrites` contains an array of json objects under the `hosting` json object. Each object under `rewrites` needs to contain a `source` and a `destination` value. 
+
+Rewrites essentially tells firebase what to return at each url. So with the rewrite object above, if someone goes to our site and visits `/`, the root url, Firebase will return with `index.html` from our public folder. If a user tries to visit any other url but `/`, Firebase will return a `404`. 
+
+If no rewrites exist for the requested path, Firebase will simply serve whatever matches the raw url. So if I added an `about.html` file to my public folder, users will have to be directed to `yourwebsite.com/about.html` to view it. If you completely remove rewrites like it was in the inital `firebase.json`, then all Firebase will still server whatever matches the raw url. But if you added in a `rewrite` object like this:
+```json
+{
+  "source": "/about",
+  "destination": "/about.html"
+}
+```
+Then everytime someone navigates to `yourwebsite.com/about`, they will be served `about.html`. This is an easy way to keep urls clean. You can add as many rewrites as you want. 
+
+Another interesting rewrite is this one. 
+```json
+{
+  "source": "**",
+  "destination": "/index.html"
+}
+```
+
+What this means is that instead of returning a `404` if the request doesn't exist, then Firebase will just return `index.html`.  There's a lot more you can do with rewrites, you can [read more about them here](https://firebase.google.com/docs/hosting/full-config#redirects) 
+
+Once you've added some content to your website, go ahead and commit it to your `master` branch and then pull that branch into your `release` branch so that we can view your website on the web. An alternative to deploying is the command `firebase deploy`, but this isn't needed with automatic deployment. 
+
+
+
 ### 5. Connecting Firebase to your domain
 
+After updating your `release` branch, navigate to the Firebase Console online and to the "Hosting" tab.
+![[firebase-console-menu.png]]
 
+Once there you should see a page that looks like this:
+![[firebase-console-hosting.png]]
+
+If you click one one of the domains in the table, you'll be redirected to a live version of your website. But those domains are ugly, so let's add our own by clicking on "Add Custom Domain". For this I'm using the domain `test.dalenw.dev`, which will not be live after this post. 
+![[add-domain-1.png]]
+
+Anyways after you hit continue, Firebase will list an IP address and a record type of `A`. Copy this IP address and navigate to your DNS provider, probably Cloudflare if you set your domain up with them. Regardless, adding in a new DNS record will probably look like this:
+![[add-domain-2.png]]
+
+Save that, and finish the setup on the Firebase Console. After waiting a couple minutes or so, if you navigate to your domain you'll see your Firebase site!
+
+
+
+### Conclusion
+So with this guide you setup a git repo, Firebase project, linked the two, and connected Firebase to your domain. Additionally, you can update your website automatically without having to run `firebase deploy` everytime you want to push your changes, and you have the start of a development pipeline by using multiple git branches. Enjoy!
+
+If you want to, you can also enable Cloud Logging from the hosting tab or by going to your Project Settings > Integrations and clicking on Cloud Logging there. That way if a user ever reports an issue with your site, you can naviate there to view the logs and narrow down exactly what happened to cause the issue. 
 
