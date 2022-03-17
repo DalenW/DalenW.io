@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "95f97f81b0d5b726",
+        "id": "7c54be4ad5ef6bd1",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -87,9 +87,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "95f97f81b0d5b726",
+  "active": "7c54be4ad5ef6bd1",
   "lastOpenFiles": [
     "_posts/2022-03-15-host-website-on-firebase.md",
+    "images/static-website-on-firebase/firebase-new-step-1.png.md",
     "_posts/2022-01-04-first-post.md",
     "_posts/2022-01-11-rails-id-cards.md",
     "public/images.md",
