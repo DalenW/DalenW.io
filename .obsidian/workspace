@@ -19,61 +19,79 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "8583f16e66bdb279",
-    "type": "mobile-drawer",
+    "id": "33b57c51f31ce5fc",
+    "type": "split",
     "children": [
       {
-        "id": "ba89fdde5174cf5f",
-        "type": "leaf",
-        "state": {
-          "type": "file-explorer",
-          "state": {}
-        }
-      },
-      {
-        "id": "6f06eebed5f59aca",
-        "type": "leaf",
-        "state": {
-          "type": "search",
-          "state": {
-            "query": "",
-            "matchingCase": false,
-            "explainSearch": false,
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical"
+        "id": "0af62a35bc70fc37",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2efd0e25f581592e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "8c2c521651176992",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
           }
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 300
   },
   "right": {
-    "id": "c3b1b31725ec86fc",
-    "type": "mobile-drawer",
+    "id": "cbceeec432e1e215",
+    "type": "split",
     "children": [
       {
-        "id": "762f598ec64133a9",
-        "type": "leaf",
-        "state": {
-          "type": "backlink",
-          "state": {
-            "file": "_posts/2022-03-15-host-website-on-firebase.md",
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical",
-            "showSearch": false,
-            "searchQuery": "",
-            "backlinkCollapsed": false,
-            "unlinkedCollapsed": true
+        "id": "c5a9be19ed82363c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0dd6708efaac40d2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2022-03-15-host-website-on-firebase.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
           }
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
   },
   "active": "95f97f81b0d5b726",
   "lastOpenFiles": [
-    "_posts/2022-03-15-host-website-on-firebase.md"
+    "_posts/2022-03-15-host-website-on-firebase.md",
+    "public/images.md",
+    "README.md",
+    "LICENSE.md"
   ]
 }
