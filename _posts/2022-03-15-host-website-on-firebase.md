@@ -155,3 +155,8 @@ So with this guide you setup a git repo, Firebase project, linked the two, and c
 
 If you want to, you can also enable Cloud Logging from the hosting tab or by going to your Project Settings > Integrations and clicking on Cloud Logging there. That way if a user ever reports an issue with your site, you can naviate there to view the logs and narrow down exactly what happened to cause the issue. 
 
+### Updates
+
+**Update March 24, 2022**
+Updating the DNS on Cloudflare after connecting it with Firebase can be a little tricky and may not immediately work. Once you're sure you've done it right you may need to wait a few minutes to a day for your domain to properly display your website. 
+
