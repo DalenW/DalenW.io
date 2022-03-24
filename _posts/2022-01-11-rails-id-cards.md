@@ -4,8 +4,6 @@ title: Image Manipulation with Rails
 published: false
 ---
 
-# Image Manipulation with Rails
-
 For one of my clients I was tasked with generating ID cards in a web app that runs on Ruby on Rails. Initially I wasn't sure how I was going to tackle this.
 Rails isn't well known for image manipulation. However, there is a little bit of image manipution built into rails, with Active Storage varients. From what the Rails docs say, varients use RMagick on the backend, and RMagick is simply a wrapper for ImageMagick, a popular package for processing and manipulating images. The Rails docs indicated that `vips`, a lighter and faster image processor, will become default soon. But for this example I will use RMagick. 
 

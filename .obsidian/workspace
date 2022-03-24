@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "about.md",
+            "file": "_posts/2022-03-15-host-website-on-firebase.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "about.md",
+                "file": "_posts/2022-03-15-host-website-on-firebase.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,10 +89,10 @@
   },
   "active": "95f97f81b0d5b726",
   "lastOpenFiles": [
+    "_posts/2022-03-15-host-website-on-firebase.md",
+    "_posts/2022-01-11-rails-id-cards.md",
     "about.md",
     "LICENSE.md",
-    "README.md",
-    "_posts/2022-03-15-host-website-on-firebase.md",
-    "_posts/2022-01-11-rails-id-cards.md"
+    "README.md"
   ]
 }
