@@ -9,3 +9,4 @@ Caddyfile
 .idea
 _site
 .jekyll-cache
+.obsidian/workspace

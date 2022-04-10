@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Image Manipulation with Rails
-published: false
+published: true
 ---
 
 For one of my clients I was tasked with generating ID cards in a web app that runs on Ruby on Rails. Initially I wasn't sure how I was going to tackle this.
@@ -75,8 +75,36 @@ The `Draw` object has a lot of options. The 4 main ones are the ones I used. If 
 
 `self.gravity` needs to be a [Magick Gravity Constant](https://rmagick.github.io/draw.html#gravity_eq). 
 
-`self.font` needs to be a string represeting a path to the font file. So I used something like this. `Rails.root.join('FOLDER', 'FILE.ttf').to_s`
+`self.font` needs to be a string represeting a path to the font file. So I used something like this. `Rails.root.join('FOLDER', 'FILE.ttf').to_s`.
+
+`self.fill` is the color of the text. It is stored via hex values, so should look like this: `text_color = '#FFFFFF'`.
+
+`self.pointsize` is just the text size. It's an integer.
 
 
 
+### Adding an image on top of another image
 
+So we have our card template `new_card` with a bit of text on it. Now we want to add someone's profile picture to the card. Assuming you already have a profile picture ready to go that's cropped down to a set size, here's how you add that image ontop of our edited template. 
+
+```ruby
+profile_image = Image.from_blob() # you can source it from anywhere. from_blob is how you would get it from ActiveStorage
+
+new_card.push profile_image # Remember new_card is an ImageList, meaning it can contain multiple images
+
+profile_image.page = Rectangle.new(target_width, target_height, pos_x, pos_y) # this sets the position of the profile image on the template. target width and height should match the size of your cropped profile picture, and pos x and y is the position on the template image.
+
+new_card_path = Tempfile.new("id_card").path # this is a temp file we can use to store the image on the file system before uploading it back to active storage
+
+new_card.format = 'jpeg' # make sure it's saved as a jpeg
+new_card.flatten_images.write(new_card_path) # then combine all the images, and save it to that temp file
+
+# then if you want to store it with ActiveStorage, do this.
+your_model.id_card_image.attach(io: File.open(new_card_path), filename: "something.jpg") # your_model being the model you're attaching it too, and id_card_image being the ActiveStorage association in that model
+```
+
+
+
+Honestly that's about it. The hardest parts for me when figuring all of this out is writing a way to automatically wrap lines for large paragraphs of text, and facial recognition to automatically crop a profile image with the face in the center of the photo. These problems are not the focus of the article, and ended up being somewhat niche for my requirements. 
+
+If you have any questions about this feel free to shoot me an email.

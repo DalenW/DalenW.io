@@ -5,7 +5,7 @@ title: About
 
 My name is Dalen Ward. 
 I'm currently studying Computer Science at Utah Valley University. 
-Big fan Ruby on Rails, and right now most of my content will reflect that. 
+Big fan of Ruby on Rails, and right now most of my content will reflect that. 
 
 This replaced my old website, which was a super ugly and does not represent my skills.
 Currently I'm a fullstack developer, but my strength is backend development.
