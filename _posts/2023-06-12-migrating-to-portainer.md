@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating Caprover to Portainer
-published: false
+published: true
 ---
 
 Before I fully understood Docker Services and Swarm, I needed an easy way to host containers for personal and business use.
@@ -37,3 +37,5 @@ Make sure to use `rsync` to preserve permission and group data for each file.
 Overall command looked something like this:
 `rsync -raz _data <NEW VOLUME>`
 `_data` will be copied under the new volume. 
+
+All in all that should be it. 
