@@ -1,0 +1,111 @@
+{
+  "main": {
+    "id": "2c175b643aee685f",
+    "type": "split",
+    "children": [
+      {
+        "id": "2673582c88ac22dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "644fb7078ed58915",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2023-06-12-migrating-to-portainer.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7dc27dcd500ec1cc",
+    "type": "split",
+    "children": [
+      {
+        "id": "36164c669d60c6c5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "56279b6c64359d7d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cedbb3dbc7b6f132",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "df566b3e7363c0a2",
+    "type": "split",
+    "children": [
+      {
+        "id": "e1f54d3816cb3959",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "79f6875d143e4daf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2023-06-12-migrating-to-portainer.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false
+    }
+  },
+  "active": "644fb7078ed58915",
+  "lastOpenFiles": [
+    "README.md"
+  ]
+}
